@@ -4,19 +4,37 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RatingBar;
+import android.widget.CheckBox;
+import android.widget.Toast;
+
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
+    // creating variables for our edittext, button and dbhandler
+    private EditText nameText, orderText, cuisineText;
+    private RatingBar ratingBar;
+    private CheckBox distanceBox;
+    private Button addResturantBtn;
+    private DBHandler dbHandler;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // database code:
+        
+
+        // viewpager code:
         // references the tabLayout and viewPager
         TabLayout tabLayout = findViewById(R.id.tabs);
         ViewPager2 viewPager2 = findViewById(R.id.viewpager);

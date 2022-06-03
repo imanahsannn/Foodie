@@ -186,6 +186,7 @@
         android:layout_marginTop="16dp"
         android:text="ADD A RESTAURANT"
         android:textSize="25dp"
+        android:textColor="@color/main"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
