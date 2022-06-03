@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
               switch (position) {
                   case 0:
-                      tab.setText("Adnan");
+                      tab.setText("Today");
                       break;
                   case 1:
-                      tab.setText("Iman");
+                      tab.setText("Calendar");
                       break;
                   default:
-                      tab.setText("Thenuja");
+                      tab.setText("Add");
                       break;
               }
 
