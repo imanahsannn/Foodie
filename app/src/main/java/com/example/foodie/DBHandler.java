@@ -2,39 +2,24 @@ package com.example.foodie;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper {
 
     // creating a constant variables for our database.
-    // below variable is for our database name.
-    private static final String DB_NAME = "resturantdb";
-
-    // below int is our database version
+    private static final String DB_NAME = "restaurantdb";
     private static final int DB_VERSION = 1;
-
-    // below variable is for our table name.
     private static final String TABLE_NAME = "resturants";
-
-    // below variable is for our id column.
     private static final String ID_COL = "id";
-
-    // below variable is for our resturant name column
     private static final String NAME_COL = "name";
-
-    // below variable id for our food order column.
     private static final String ORDER_COL = "order";
-
-    // below variable for our rating column.
     private static final String RATING_COL = "rating";
-
-    // below variable is for our distance  column.
     private static final String DISTANCE_COL = "distance";
-
-    // below variable is for our cuisine column.
     private static final String CUISINE_COL = "cuisine";
-
 
     // constructor for our database handler.
     public DBHandler(Context context) {
@@ -58,7 +43,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     // add new restaurant to our sqlite database.
-    public void addNewRestaurant(String name, String order, int rating, int distance, String cuisine) {
+    public void addNewRestaurant(String name, String order, int rating, String distance, String cuisine) {
 
         // creating a variable for our database and calling writable method as we are writing data in our database.
         SQLiteDatabase db = this.getWritableDatabase();
@@ -78,6 +63,32 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // closing our database after adding database.
         db.close();
+    }
+
+    public ArrayList<RestaurantModal> readRestaurants() {
+
+        // create db
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // creating a cursor with query to read data from database
+        Cursor restaurantCursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+
+        ArrayList<RestaurantModal> restaurantModalArrayList = new ArrayList<>();
+
+        // moving our cursor to first position
+        if (restaurantCursor.moveToFirst()) {
+            do {
+                // on below line we are adding the data from cursor to our array list.
+                restaurantModalArrayList.add(new RestaurantModal(restaurantCursor.getString(1),
+                        restaurantCursor.getString(2),
+                        restaurantCursor.getInt(3),
+                        restaurantCursor.getString(4),
+                        restaurantCursor.getString(5)));
+            } while (restaurantCursor.moveToNext());
+            // moving our cursor to next.
+        }
+        restaurantCursor.close();
+        return restaurantModalArrayList;
     }
 
     @Override
