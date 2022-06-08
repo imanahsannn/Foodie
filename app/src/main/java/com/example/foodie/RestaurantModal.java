@@ -26,7 +26,7 @@ public class RestaurantModal {
         this.restaurantOrder = restaurantOrder;
     }
 
-    public int setRestaurantRating() {
+    public int getRestaurantRating() {
         return restaurantRating;
     }
 

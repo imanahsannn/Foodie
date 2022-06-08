@@ -15,11 +15,11 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "resturants";
     private static final String ID_COL = "id";
-    private static final String NAME_COL = "name";
-    private static final String ORDER_COL = "order";
-    private static final String RATING_COL = "rating";
+    private static final String NAME_COL = "names";
+    private static final String ORDER_COL = "orders";
+    private static final String RATING_COL = "ratings";
     private static final String DISTANCE_COL = "distance";
-    private static final String CUISINE_COL = "cuisine";
+    private static final String CUISINE_COL = "cuisines";
 
     // constructor for our database handler.
     public DBHandler(Context context) {
@@ -33,9 +33,9 @@ public class DBHandler extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NAME_COL + " TEXT,"
-                + ORDER_COL + "TEXT,"
+                + ORDER_COL + " TEXT,"
                 + RATING_COL + " INTEGER,"
-                + DISTANCE_COL + " INTEGER,"
+                + DISTANCE_COL + " TEXT,"
                 + CUISINE_COL + " TEXT)";
 
         // calling an exec sql method to execute above sql query

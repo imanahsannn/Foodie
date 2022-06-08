@@ -197,7 +197,7 @@ public class page_3 extends Fragment {
                 cuisineET.setText("");
                 nameET.setText("");
                 orderET.setText("");
-                ratingBar.setNumStars(0);
+                ratingBar.setRating(0);
                 distanceBox1.setChecked(false);
                 distanceBox2.setChecked(false);
                 distanceBox3.setChecked(false);

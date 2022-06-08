@@ -3,7 +3,10 @@ package com.example.foodie;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +25,12 @@ public class page_1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    // creating variables for our array list, dbhandler, adapter and recycler view.
+    private ArrayList<RestaurantModal> restaurantModalArrayList;
+    private DBHandler dbHandler;
+    private RestaurantRVAdapter restaurantRVAdapter;
+    private RecyclerView restaurantRV;
 
     public page_1() {
         // Required empty public constructor
@@ -52,13 +61,51 @@ public class page_1 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+//        // initializing our all variables
+//        restaurantModalArrayList = new ArrayList<>();
+//        dbHandler = new DBHandler(getContext());
+//
+//        // getting course array list from db handler class
+//        restaurantModalArrayList = dbHandler.readRestaurants();
+//
+//        // passing array list to adapter class
+//        restaurantRVAdapter = new RestaurantRVAdapter(restaurantModalArrayList, getContext());
+//        //restaurantRV = findViewById(R.id.idRVRestaurant);
+//
+//        // setting layout manager for our recycler view.
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+//        restaurantRV.setLayoutManager(linearLayoutManager);
+//
+//        // setting our adapter to recycler view.
+//        restaurantRV.setAdapter(restaurantRVAdapter);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_page_1, container, false);
+        View view =  inflater.inflate(R.layout.fragment_page_1, container, false);
+
+        // initializing our all variables
+        restaurantModalArrayList = new ArrayList<>();
+        dbHandler = new DBHandler(getContext());
+
+        // getting course array list from db handler class
+        restaurantModalArrayList = dbHandler.readRestaurants();
+
+        // passing array list to adapter class
+        restaurantRVAdapter = new RestaurantRVAdapter(restaurantModalArrayList, getContext());
+        restaurantRV = (RecyclerView) view.findViewById(R.id.idRVRestaurant);
+
+        // setting layout manager for our recycler view.
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+        restaurantRV.setLayoutManager(linearLayoutManager);
+
+        // setting our adapter to recycler view.
+        restaurantRV.setAdapter(restaurantRVAdapter);
+
+        return view;
     }
 
 }

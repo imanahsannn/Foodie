@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // viewpager code:
-
         // references the tabLayout and viewPager
         TabLayout tabLayout = findViewById(R.id.tabs);
         ViewPager2 viewPager2 = findViewById(R.id.viewpager);

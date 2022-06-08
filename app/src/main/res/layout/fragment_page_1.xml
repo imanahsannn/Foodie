@@ -1,57 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:elevation="8dp"
-    app:cardCornerRadius="4dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <!--recycler view for displaying our courses-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVRestaurant"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent" />
 
-        <!--text view for our restaurant name-->
-        <TextView
-            android:id="@+id/nameTVpg1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:text="Restaurant Name"
-            android:textColor="@color/black" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <!--text view for our restaurant image-->
-            <TextView
-                android:id="@+id/imageTVpg1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="3dp"
-                android:text="Image"
-                android:textColor="@color/black" />
-
-
-            <!--text view for our restaurant rating-->
-            <TextView
-                android:id="@+id/ratingTVpg1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="3dp"
-                android:text="Rating"
-                android:textColor="@color/black" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
