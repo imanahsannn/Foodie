@@ -91,6 +91,27 @@ public class DBHandler extends SQLiteOpenHelper {
         return restaurantModalArrayList;
     }
 
+    // updating our restaurant
+    public void deleteRestaurant(String name) {
+        // calling a method to get writable database.
+        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//
+//        // passing all values along with its key and value pair.
+//        values.put(NAME_COL, name);
+//        values.put(ORDER_COL, order);
+//        values.put(RATING_COL, rating);
+//        values.put(DISTANCE_COL, distance);
+//        values.put(CUISINE_COL, cuisine);
+
+
+        // update method to update our database and passing our values.
+        // and comparing it with name of our course which is stored in original name variable.
+        db.delete(TABLE_NAME, "names=?", new String[]{name});
+        db.close();
+    }
+
+
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.setVersion(oldVersion);

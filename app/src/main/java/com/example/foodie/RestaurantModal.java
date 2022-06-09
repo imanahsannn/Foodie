@@ -4,7 +4,7 @@ public class RestaurantModal {
 
     private String restaurantName;
     private String restaurantOrder;
-    private int restaurantRating;
+    private float restaurantRating;
     private String restaurantDistance;
     private String restaurantCuisine;
     private int id;
@@ -26,11 +26,11 @@ public class RestaurantModal {
         this.restaurantOrder = restaurantOrder;
     }
 
-    public int getRestaurantRating() {
+    public float getRestaurantRating() {
         return restaurantRating;
     }
 
-    public void setRestaurantRating(int restaurantRating) {
+    public void setRestaurantRating(float restaurantRating) {
         this.restaurantRating = restaurantRating;
     }
 

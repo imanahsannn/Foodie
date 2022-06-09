@@ -1,10 +1,13 @@
 package com.example.foodie;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -35,6 +38,28 @@ public class RestaurantRVAdapter extends RecyclerView.Adapter<RestaurantRVAdapte
         RestaurantModal modal = restaurantModalArrayList.get(position);
         holder.restaurantNameTV.setText(modal.getRestaurantName());
         holder.restaurantRating.setText(String.valueOf(modal.getRestaurantRating()));
+        //ADD IMAGE HOLDER IF NEEDED
+
+        // below line is to add on click listener for our recycler view item.
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // on below line we are calling an intent.
+                Intent i = new Intent(context, ViewRestaurantActivity.class);
+
+                // below we are passing all our values.
+                i.putExtra("name", modal.getRestaurantName());
+                i.putExtra("order", modal.getRestaurantOrder());
+                i.putExtra("rating", modal.getRestaurantRating());
+                i.putExtra("distance", modal.getRestaurantDistance());
+                i.putExtra("cuisine", modal.getRestaurantCuisine());
+
+                // starting our activity.
+                context.startActivity(i);
+            }
+        });
+
     }
 
     @Override

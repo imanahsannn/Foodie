@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/linearLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:layout_editor_absoluteX="0dp"
+tools:layout_editor_absoluteY="26dp">
+
+<TextView
+    android:id="@+id/orderETdetail"
+    android:layout_width="167dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="101dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text=""
+    app:layout_constraintEnd_toEndOf="@+id/nameETdetail"
+    app:layout_constraintTop_toTopOf="@+id/nameETdetail" />
+
+<TextView
+    android:id="@+id/nameTVdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginBottom="10dp"
+    android:baselineAligned="false"
+    android:text="Name of Restaurant:"
+    app:layout_constraintBottom_toTopOf="@+id/nameETdetail"
+    app:layout_constraintStart_toStartOf="@+id/nameETdetail" />
+
+<TextView
+    android:id="@+id/imageTVdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="40dp"
+    android:text="Upload an Image:"
+    app:layout_constraintBottom_toBottomOf="@+id/nameTVdetail"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/nameTVdetail" />
+
+<TextView
+    android:id="@+id/distanceTVdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="79dp"
+    android:text="Distance:"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/ratingTVdetail" />
+
+<TextView
+    android:id="@+id/orderTVdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:text="Order: "
+    app:layout_constraintBottom_toTopOf="@+id/orderETdetail"
+    app:layout_constraintStart_toStartOf="@+id/orderETdetail" />
+
+<Button
+    android:id="@+id/delete"
+    android:layout_width="187dp"
+    android:layout_height="72dp"
+    android:text="Delete Restaurant"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.975"
+    tools:ignore="MissingConstraints" />
+
+<TextView
+    android:id="@+id/nameETdetail"
+    android:layout_width="167dp"
+    android:layout_height="39dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="118dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/cuisineETdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text=""
+    app:layout_constraintStart_toStartOf="@+id/cuisineTVdetail"
+    app:layout_constraintTop_toBottomOf="@+id/cuisineTVdetail" />
+
+<TextView
+    android:id="@+id/cuisineTVdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="8dp"
+    android:text="Cuisine:"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+<RatingBar
+    android:id="@+id/MyRatingdetail"
+    style="?android:attr/ratingBarStyleIndicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="32dp"
+    android:layout_marginBottom="24dp"
+    android:clickable="true"
+    android:isIndicator="false"
+    android:numStars="5"
+    android:stepSize="1"
+    app:layout_constraintBottom_toTopOf="@+id/distanceTVdetail"
+    app:layout_constraintStart_toEndOf="@+id/distanceTVdetail"
+    tools:ignore="MissingConstraints,UnknownId" />
+
+<TextView
+    android:id="@+id/ratingTVdetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="30dp"
+    android:text="Rating:"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/orderETdetail" />
+
+<LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="9dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    app:layout_constraintStart_toEndOf="@+id/distanceTVdetail"
+    app:layout_constraintTop_toBottomOf="@+id/distanceTVdetail">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="440dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="459dp">  <!--contains options-->
+
+        <CheckBox
+            android:id="@+id/option1CBdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10km"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="459dp" />
+
+        <CheckBox
+            android:id="@+id/option2CBdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-30km"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="459dp" />
+
+        <CheckBox
+            android:id="@+id/option3CBdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">30km"
+            tools:layout_editor_absoluteX="245dp"
+            tools:layout_editor_absoluteY="459dp" />
+    </LinearLayout>
+</LinearLayout>
+
+<TextView
+    android:id="@+id/titledetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    android:text="ADD A RESTAURANT"
+    android:textSize="25dp"
+    android:textColor="@color/main"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.constraintlayout.widget.Group
+    android:id="@+id/group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:constraint_referenced_ids="linearLayout2,cuisineETdetail,ratingTVdetail,cuisineTVdetail,distanceTVdetail,nameETdetail,delete,MyRatingdetail,titledetail,orderTVdetail,orderETdetail,nameTVdetail,imageTVdetail"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.constraintlayout.widget.Group
+    android:id="@+id/group2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:constraint_referenced_ids="nameTVdetail,delete,ratingTVdetail,distanceTVdetail,orderTVdetail,titledetail,cuisineETdetail,imageTVdetail,MyRatingdetail,nameETdetail,cuisineTVdetail,orderETdetail,linearLayout2"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
