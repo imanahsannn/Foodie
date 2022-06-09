@@ -13,7 +13,7 @@ public class DBHandler extends SQLiteOpenHelper {
     // creating a constant variables for our database.
     private static final String DB_NAME = "restaurantdb";
     private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "resturants";
+    private static final String TABLE_NAME = "restaurants";
     private static final String ID_COL = "id";
     private static final String NAME_COL = "names";
     private static final String ORDER_COL = "orders";
@@ -43,7 +43,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     // add new restaurant to our sqlite database.
-    public void addNewRestaurant(String name, String order, int rating, String distance, String cuisine) {
+    public void addNewRestaurant(String name, String order, double rating, String distance, String cuisine) {
 
         // creating a variable for our database and calling writable method as we are writing data in our database.
         SQLiteDatabase db = this.getWritableDatabase();
@@ -92,10 +92,15 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.setVersion(oldVersion);
+        onCreate(db);
+    }
+
+    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // check if the table exists already
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 }
-

@@ -34,7 +34,7 @@ public class RestaurantRVAdapter extends RecyclerView.Adapter<RestaurantRVAdapte
         // setting data to our views of recycler view item
         RestaurantModal modal = restaurantModalArrayList.get(position);
         holder.restaurantNameTV.setText(modal.getRestaurantName());
-        holder.restaurantRating.setText(modal.getRestaurantRating());
+        holder.restaurantRating.setText(String.valueOf(modal.getRestaurantRating()));
     }
 
     @Override

@@ -158,7 +158,7 @@ public class page_3 extends Fragment {
                 String inputName = nameET.getText().toString();
                 String inputOrder = orderET.getText().toString();
                 String inputCuisine = cuisineET.getText().toString();
-                int inputRating = ratingBar.getNumStars();
+                float inputRating = ratingBar.getRating();
                 boolean inputDistance1 = distanceBox1.isChecked();
                 boolean inputDistance2 = distanceBox2.isChecked();
                 boolean inputDistance3 = distanceBox3.isChecked();
