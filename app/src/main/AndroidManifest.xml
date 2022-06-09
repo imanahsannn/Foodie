@@ -32,7 +32,7 @@
 
         <activity
             android:name=".ViewRestaurantActivity"
-            android:label="view_chan">
+            android:label="@string/app_name">
         </activity>
     </application>
 

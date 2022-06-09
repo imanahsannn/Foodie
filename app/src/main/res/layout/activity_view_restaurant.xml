@@ -59,20 +59,20 @@ tools:layout_editor_absoluteY="26dp">
     app:layout_constraintBottom_toTopOf="@+id/orderETdetail"
     app:layout_constraintStart_toStartOf="@+id/orderETdetail" />
 
-<Button
-    android:id="@+id/delete"
-    android:layout_width="187dp"
-    android:layout_height="72dp"
-    android:text="Delete Restaurant"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.975"
-    tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="187dp"
+        android:layout_height="72dp"
+        android:text="Delete Restaurant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915"
+        tools:ignore="MissingConstraints" />
 
-<TextView
+    <TextView
     android:id="@+id/nameETdetail"
     android:layout_width="167dp"
     android:layout_height="39dp"
@@ -180,20 +180,20 @@ tools:layout_editor_absoluteY="26dp">
     </LinearLayout>
 </LinearLayout>
 
-<TextView
-    android:id="@+id/titledetail"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="24dp"
-    android:layout_marginTop="16dp"
-    android:text="ADD A RESTAURANT"
-    android:textSize="25dp"
-    android:textColor="@color/main"
-    android:textStyle="bold"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/titledetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="28dp"
+        android:text="RESTAURANT DETAILS"
+        android:textColor="@color/main"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<androidx.constraintlayout.widget.Group
+    <androidx.constraintlayout.widget.Group
     android:id="@+id/group"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -212,5 +212,16 @@ tools:layout_editor_absoluteY="26dp">
     app:layout_constraintEnd_toStartOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditCancel"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:text="x"
+        android:textSize="20sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
