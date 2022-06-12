@@ -65,69 +65,6 @@ public class page_3 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-        // database code:
-
-//        // initalize variables
-//        nameET = getView().findViewById(R.id.nameET);
-//        orderET = getView().findViewById(R.id.orderET);
-//        cuisineET = getView().findViewById(R.id.cuisineET);
-//        ratingBar = getView().findViewById(R.id.MyRating);
-//        distanceBox1 = getView().findViewById(R.id.option1CB);
-//        distanceBox2 = getView().findViewById(R.id.option2CB);
-//        distanceBox3 = getView().findViewById(R.id.option3CB);
-//        addRestaurantBtn = getView().findViewById(R.id.button);
-
-        // create new dbhandler class and passing context into it
-        //dbHandler = new DBHandler(getActivity());
-
-//        // below line is to add on click listener for our add course button.
-//        addRestaurantBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                // getting the data from editText fields
-//                String inputName = nameET.getText().toString();
-//                String inputOrder = orderET.getText().toString();
-//                String inputCuisine = cuisineET.getText().toString();
-//                int inputRating = ratingBar.getNumStars();
-//                boolean inputDistance1 = distanceBox1.isChecked();
-//                boolean inputDistance2 = distanceBox2.isChecked();
-//                boolean inputDistance3 = distanceBox3.isChecked();
-//
-//
-//                // make sure there is no empty fields
-//                if (inputName.isEmpty() && inputOrder.isEmpty() && inputCuisine.isEmpty()) {
-//                    Toast.makeText(getActivity(), "Please fill in all fields...", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                // make sure one box is checked for distance
-//                if ((inputDistance1 && inputDistance2) || (inputDistance1 && inputDistance3) ||
-//                        (inputDistance2 && inputDistance3)) {
-//                    Toast.makeText(getActivity(), "Please check one box for distance", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                // adding data to db and find checked box
-//                if (inputDistance1) {
-//                    dbHandler.addNewRestaurant(inputName, inputOrder, inputRating, "Less than 10km", inputCuisine);
-//                } else if (inputDistance2) {
-//                    dbHandler.addNewRestaurant(inputName, inputOrder, inputRating, "Between 10km and 30km", inputCuisine);
-//                } else {
-//                    dbHandler.addNewRestaurant(inputName, inputOrder, inputRating, "More than 30km", inputCuisine);
-//                }
-//
-//                // after adding the data we are displaying a toast message.
-//                Toast.makeText(getActivity(), "Restaurant has been added!", Toast.LENGTH_SHORT).show();
-//                nameET.setText("");
-//                orderET.setText("");
-//                ratingBar.setNumStars(0);
-//                distanceBox1.setChecked(false);
-//                distanceBox2.setChecked(false);
-//                distanceBox3.setChecked(false);
-//            }
-//        });
     } // end of onCreate
 
     @Override

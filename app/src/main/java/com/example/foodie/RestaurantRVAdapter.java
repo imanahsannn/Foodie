@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -67,6 +66,14 @@ public class RestaurantRVAdapter extends RecyclerView.Adapter<RestaurantRVAdapte
         // returning the size of our array list
         return restaurantModalArrayList.size();
     }
+
+    public void setFilter(ArrayList<RestaurantModal> newList){
+        restaurantModalArrayList = new ArrayList<>();
+        restaurantModalArrayList.addAll(newList);
+        notifyDataSetChanged();
+    }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 

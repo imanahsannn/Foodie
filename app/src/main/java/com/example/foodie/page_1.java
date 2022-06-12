@@ -3,7 +3,6 @@ package com.example.foodie;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -61,24 +60,6 @@ public class page_1 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-//        // initializing our all variables
-//        restaurantModalArrayList = new ArrayList<>();
-//        dbHandler = new DBHandler(getContext());
-//
-//        // getting course array list from db handler class
-//        restaurantModalArrayList = dbHandler.readRestaurants();
-//
-//        // passing array list to adapter class
-//        restaurantRVAdapter = new RestaurantRVAdapter(restaurantModalArrayList, getContext());
-//        //restaurantRV = findViewById(R.id.idRVRestaurant);
-//
-//        // setting layout manager for our recycler view.
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
-//        restaurantRV.setLayoutManager(linearLayoutManager);
-//
-//        // setting our adapter to recycler view.
-//        restaurantRV.setAdapter(restaurantRVAdapter);
     }
 
     @Override
@@ -91,7 +72,7 @@ public class page_1 extends Fragment {
         restaurantModalArrayList = new ArrayList<>();
         dbHandler = new DBHandler(getContext());
 
-        // getting course array list from db handler class
+        // getting restaurant array list from db handler class
         restaurantModalArrayList = dbHandler.readRestaurants();
 
         // passing array list to adapter class

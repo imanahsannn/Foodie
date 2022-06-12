@@ -1,21 +1,13 @@
 package com.example.foodie;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ViewRestaurantActivity extends AppCompatActivity {
@@ -82,16 +74,12 @@ public class ViewRestaurantActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // inside this method we are calling an update course
-                // method and passing all our edit text values.
                 dbHandler.deleteRestaurant(name);
 
                 // displaying a toast message that our course has been updated.
                 Toast.makeText(ViewRestaurantActivity.this, "Restaurant Deleted...", Toast.LENGTH_SHORT).show();
 
-                // launching our main activity.
-                Intent i = new Intent(ViewRestaurantActivity.this, MainActivity.class);
-                startActivity(i);
+                finish();
             }
         });
 
@@ -99,9 +87,7 @@ public class ViewRestaurantActivity extends AppCompatActivity {
         goBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // launching our main activity.
-                Intent i = new Intent(ViewRestaurantActivity.this, MainActivity.class);
-                startActivity(i);
+               finish();
             }
         });
 
