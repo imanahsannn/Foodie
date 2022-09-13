@@ -4,7 +4,7 @@ Your personal restaurant library app that has everything you need!
 
 ------------------------------------------------------------------------------
 
-## Key Feautures
+## Key Features
 
 - Foodie contains all the information about your restaurants, including what you ordered, your personal star rating, how far it is from you and its cuisine.
 - It displays all your restaurants in an eye catching way, and allows you to view or edit your responses as you wish
